@@ -127,7 +127,6 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'photo', 'static'),
     os.path.join(BASE_DIR, 'blogcrud', 'static'),
-    os.path.join(BASE_DIR),
     
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
