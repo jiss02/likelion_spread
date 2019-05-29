@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+  <h5 class="card-header">{{blog.title}} </h5>
+  <div class="card-body">
+    <h5 class="card-title">본문</h5>
+    <div class = 'date'>
+        <p> 
+            작성: {{blog.date}} 
+            <br>
+            수정: {{blog.update_date}}
+        </p>
+    </div>
+    <p class="card-text">{{blog.body}}</p>
+    <a href="{% url 'blogupdate' blog.id %}" class="btn btn-dark">글수정</a>
+    <a href="{% url 'blogdelete' blog.id %}" class="btn btn-dark">글삭제</a>
+    <a href="{% url 'home' %}" class="btn btn-dark">뒤로가기</a>
+  </div>
+</div>
+
+{% endblock content %}
+

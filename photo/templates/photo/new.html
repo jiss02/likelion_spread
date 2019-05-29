@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{% url 'photocreate' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.title.label}} <br>
+    {{form.title}} <br>
+    {{form.body.label}} <br>
+    {{form.body}} <br>
+    {{form.image.label}} <br>
+    {{form.image}} <br>
+    <br>
+    <input class = 'btn btn-dark' type="submit" value="제출하기">
+
+</form>
+
+{% endblock content %}
+

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'bootstrap4',
+    'blogcrud',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +126,7 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'photo', 'static'),
+    os.path.join(BASE_DIR, 'blogcrud', 'static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'

@@ -1,0 +1,10 @@
+@font-face { font-family: 'SunBatang-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body { 
+    font-family : 'SunBatang-Bold';
+}
+
+.date {
+    font-size: 0.8rem;
+} 
+
