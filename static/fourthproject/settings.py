@@ -123,7 +123,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+print(BASE_DIR)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'photo', 'static'),
     os.path.join(BASE_DIR, 'blogcrud', 'static'),

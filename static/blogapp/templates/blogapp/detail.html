@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+  <h5 class="card-header">{{blog.title}} </h5>
+  <div class="card-body">
+    <h5 class="card-title">본문</h5>
+    <div class = 'date'>
+        <p> 
+            작성: {{blog.date}} 
+            <br>
+            수정: {{blog.update_date}}
+        </p>
+    </div>
+    <p class="card-text">{{blog.body}}</p>
+    <a href="{% url 'blogupdate' blog.id %}" class="btn btn-dark">글수정</a>
+    <a href="{% url 'blogdelete' blog.id %}" class="btn btn-dark">글삭제</a>
+    <a href="{% url 'commentcreate' blog.id %}" class = "btn btn-dark">댓글쓰기</a>
+    <a href="javascript:{document.getElementById('common').submit()}" class = "btn btn-dark">댓글등록</a>
+    <a href="{% url 'home' %}" class="btn btn-dark">뒤로가기</a>
+  </div>
+</div>
+
+
+
+<form id = 'common' method="POST">
+  {% csrf_token %}
+  <br>
+    {{form.content}}
+</form>
+
+{% for comment in blog.comments.all %}
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text" style = "font-size: 10px;">{{comment.create_at}}</p>
+    <p class="card-title">{{comment.content}}</p>
+  </div>
+</div>
+<br>
+
+{% empty %}
+
+<p>작성된 댓글이 없습니다.</p>
+
+{% endfor %}
+
+
+
+{% endblock content %}
+

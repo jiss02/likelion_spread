@@ -1,0 +1,69 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello lion!</title>
+    <link rel="icon" href="{% static 'blogcrud/ico/favi.png' %}">
+    <link rel="stylesheet" href="{% static 'blogcrud/css/deco.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">MENU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Post<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'photo' %}">Photo</a>
+            </li>   
+
+            <!-- 글작성 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Write
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'blogcreate' %}">Post</a>
+                <a class="dropdown-item" href="{% url 'photocreate' %}">Photo</a>
+              </div>
+            </li>
+            
+            <!-- 로그인 로그아웃 -->
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                환영합니다 {{ user.username }} 님!
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                <form action="{% url 'logout' %}" method = "POST" id = 'logout'>
+                    {% csrf_token %} <input type="hidden">
+                </form>
+                
+              </div>
+            </li>
+            {% else %}
+            <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+            <a class="dropdown-item" href="{% url 'signup' %}">Signup</a>
+
+            {% endif %}
+
+          </ul>
+        </div>
+      </nav>
+      <div class = "container" style = "margin-left: auto; margin-right:auto;" >
+      <br>
+      {% block content %}
+      {% endblock %}
+      </div>
+    </body>
+  </html>

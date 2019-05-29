@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form method="POST">
+
+         {% csrf_token %}
+            {{form.title.label}}
+            <br>
+            {{form.title}}
+            <br>
+            {{form.body.label}}
+            <br>
+            {{form.body}}
+            <br>
+            {{form.date.label}}
+            <br>
+            {{form.date}}
+            <br><br>
+            <input class="btn btn-dark" type="submit" value = "수정하기">
+    
+    </form>
+
+{% endblock content %}
