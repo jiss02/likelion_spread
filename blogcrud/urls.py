@@ -11,4 +11,7 @@ urlpatterns = [
 
     # 삭제
     path('delete/<int:blog_id>', views.delete, name = 'blogdelete'),
+
+    # 댓글
+    path("comment/<int:blog_id>", views.commentcreate, name="commentcreate")
 ]
