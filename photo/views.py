@@ -14,7 +14,8 @@ def new(req):
 
 def create(req):
     if req.method == 'POST':
-        form = PhotoForm(req.POST, req.FILES['image'])
+        print(req.FILES)
+        form = PhotoForm(req.POST, req.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
