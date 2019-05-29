@@ -1,12 +1,13 @@
 {% load bootstrap4 %}
 {% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %}
-{% load static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
   <head>
     <title>Hello lion!</title>
+    <link rel="icon" href="{% static 'blogcrud/ico/favi.png' %}">
     <link rel="stylesheet" href="{% static 'blogcrud/css/deco.css' %}">
   </head>
   <body>
