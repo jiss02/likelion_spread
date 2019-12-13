@@ -1,4 +1,4 @@
-  <h3 align="center">2019 1학기 멋쟁이 사자처럼 블로그 프로젝트</h3> :open_book:
+  <h3 align="center">2019 1학기 멋쟁이 사자처럼 블로그 프로젝트</h3>
   <p align="center">
     블로그, 사진첩, 댓글 CRUD 기능 구현하기 <br/>
   </p>
