@@ -77,7 +77,7 @@ whitenoise==4.1.2
 
 1. Clone the repo
 ```sh
-$ git clone https://github.com/jiss02/Bosswar.git
+$ git clone https://github.com/jiss02/Django-Blog-Project.git
 ```
 2. Migrate Database
 ```sh
