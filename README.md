@@ -1,6 +1,4 @@
-  <h3 align="center">2019 1학기 멋쟁이 사자처럼 블로그 프로젝트</h3>
-
-  																							:open_book:
+  <h3 align="center">2019 1학기 멋쟁이 사자처럼 블로그 프로젝트</h3> :open_book:
   <p align="center">
     블로그, 사진첩, 댓글 CRUD 기능 구현하기 <br/>
   </p>
@@ -101,13 +99,17 @@ $ python manage.py runserver
 &nbsp;
 ### Demo
 <div align="center">
-<img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205225-b9d3f400-1766-11ea-9484-84668cf06d21.png">
-<img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205226-ba6c8a80-1766-11ea-98b1-a9445104f3b0.png">
-
-<img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205227-ba6c8a80-1766-11ea-83a5-663690d8e7d6.png">
-
-<img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205228-ba6c8a80-1766-11ea-931c-7ce3be36fb95.png">
-
+  
+| main page |
+| :---: |
+| <img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205225-b9d3f400-1766-11ea-9484-84668cf06d21.png"> |
+| detail | 
+| <img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205226-ba6c8a80-1766-11ea-98b1-a9445104f3b0.png"> | 
+| photo write | 
+| <img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205227-ba6c8a80-1766-11ea-83a5-663690d8e7d6.png"> | 
+| diary write | 
+| <img width="800" alt="스크린샷 2019-11-08 오전 3 35 40" src="https://user-images.githubusercontent.com/42693808/70205228-ba6c8a80-1766-11ea-931c-7ce3be36fb95.png"> | 
+ 
 
 </div>
 
